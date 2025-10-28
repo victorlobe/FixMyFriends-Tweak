@@ -24,9 +24,10 @@
 
 ## Requirements
 
-- iOS 5.0+
-- Find my Friends version 2.1+ (tested with versions 2.1 and 2.1.1)
+- iOS 5.1+
+- Find my Friends version 1.0+ (tested with versions 1.0, 2.1 and 2.1.1)
 - MobileSubstrate
+- Root certificates from tlsroot.litten.ca
 
 ## Installation
 
