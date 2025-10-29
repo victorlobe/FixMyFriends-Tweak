@@ -58,7 +58,7 @@
 
 4. Respring your device
 
-## Version History
+## Changelog
 
 ### v1.0.0
 - Initial release
