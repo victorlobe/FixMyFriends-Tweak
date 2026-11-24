@@ -60,6 +60,10 @@
 
 ## Changelog
 
+### v1.0.1
+- Added a package Icon.
+- Added a depiction URL.
+
 ### v1.0.0
 - Initial release
 

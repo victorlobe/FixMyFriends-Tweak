@@ -1,9 +1,11 @@
 Package: com.victorlobe.fixmyfriends
 Name: FixMyFriends
-Version: 1.0.0
+Version: 1.0.1
 Architecture: iphoneos-arm
 Description: Fixes Find My Friends on iOS 5 and 6.
 Maintainer: Victor
 Author: Victor
 Section: Tweaks
+Icon: file:///Library/Application%20Support/com.victorlobe.fixmyfriends/icon.png
 Depends: mobilesubstrate (>= 0.9.5000)
+Depiction: http://repo.victorlobe.me/depictions/depiction.html?id=com.victorlobe.fixmyfriends
