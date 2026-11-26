@@ -60,6 +60,9 @@
 
 ## Changelog
 
+### v1.0.2
+- Fixed the tweak not loading.
+
 ### v1.0.1
 - Added a package Icon.
 - Added a depiction URL.
