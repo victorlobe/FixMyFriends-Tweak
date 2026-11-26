@@ -1,6 +1,22 @@
 ARCHS = armv7 arm64
 TARGET := iphone:7.1
 
+# Force Xcode 26: the Xcode 27 linker drops the Thumb bit from armv7 __mod_init_func
+# pointers, so the dylib crashes in dyld on iOS 5 and 6.
+XCODE26_APP ?= /Applications/Xcode 26.6.app
+XCODE26_LINK := $(CURDIR)/.theos/Xcode26.app
+$(shell mkdir -p "$(CURDIR)/.theos" && ln -sfn "$(XCODE26_APP)" "$(XCODE26_LINK)")
+export DEVELOPER_DIR := $(XCODE26_LINK)/Contents/Developer
+MAKE := $(DEVELOPER_DIR)/usr/bin/make
+_FMF_TC := $(DEVELOPER_DIR)/Toolchains/XcodeDefault.xctoolchain/usr/bin
+TARGET_CC := $(_FMF_TC)/clang
+TARGET_CXX := $(_FMF_TC)/clang++
+TARGET_LD := $(_FMF_TC)/clang
+TARGET_LIPO := $(_FMF_TC)/lipo
+TARGET_STRIP := $(_FMF_TC)/strip
+TARGET_DSYMUTIL := $(_FMF_TC)/dsymutil
+TARGET_CODESIGN_ALLOCATE := $(_FMF_TC)/codesign_allocate
+export TARGET_CC TARGET_CXX TARGET_LD TARGET_LIPO TARGET_STRIP TARGET_DSYMUTIL TARGET_CODESIGN_ALLOCATE
 
 include $(THEOS)/makefiles/common.mk
 
